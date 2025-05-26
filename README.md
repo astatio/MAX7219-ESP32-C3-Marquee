@@ -1,7 +1,7 @@
 # MAX7219-ESP32-C3-Marquee
 ESP32-C3 &amp; MAX7219 Scrolling Marquee Text (4-Chain)
 
-This project demonstrates how to create a scrolling marquee text display using an ESP32-C3 microcontroller and a chain of four MAX7219 8x8 LED dot matrix modules. While I - the author - have used the GPIOs 1, 2, and 3 these are commented out and need to be edited.
+This project demonstrates how to create a scrolling marquee text display using an ESP32-C3 microcontroller and a chain of four MAX7219 8x8 LED dot matrix modules. While I - the author - have used the GPIOs 1, 2, and 3 these are commented out and need to be edited. These commented GPIOs are **not recommended** at all to be used for this purpose.
 
 ## Features
 
@@ -23,11 +23,6 @@ This project demonstrates how to create a scrolling marquee text display using a
 *   **Arduino IDE** (with ESP32 core installed).
 *   **`LedControl` Library:** By Eberhard Fahle.
     *   Install via Arduino IDE: `Sketch` -> `Include Library` -> `Manage Libraries...` -> Search for "LedControl" and install.
-
-## Wiring Connections
-**Note on GPIO1 (TXD0):**
-GPIO1 is typically used as `TXD0` for the default UART0 on the ESP32-C3. This UART is used for programming and `Serial.print()` output. Using GPIO1 for the MAX7219 DIN pin might interfere with Serial Monitor functionality or cause issues during code upload if the MAX7219 is actively driven. GPI01 was choosen because I was missing a bigger header. I advise you **not** to use it.
-
 
 ## Setup and Usage
 
